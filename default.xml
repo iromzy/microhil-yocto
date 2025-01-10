@@ -29,6 +29,6 @@
     <!-- meta-raspberrypi-->
     <project name="agherzan/meta-raspberrypi"
              path="meta-raspberrypi"
-             revision="master"
+             revision="scarthgap"
              remote="github" />
 </manifest>
