@@ -26,12 +26,9 @@ jobs:
           repo init -u https://github.com/iromzy/microhil-yocto.git -b main
           repo sync --no-clone-bundle --current-branch --jobs=4
 
-      - name: Set up Yocto environment
-        run: |
-          source poky/oe-init-build-env
-
       - name: Build Yocto Image
         run: |
+          source poky/oe-init-build-env
           bitbake microhil-image
 
       - name: Upload artifacts
