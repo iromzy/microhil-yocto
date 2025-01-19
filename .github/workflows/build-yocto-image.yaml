@@ -1,0 +1,42 @@
+name: Build Yocto Image
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-yocto:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential \
+                                 chrpath socat libsdl1.2-dev xterm cpio python3 python3-pip python3-pexpect \
+                                 xz-utils debianutils iputils-ping bmap-tools parted
+
+      - name: Initialize repo and sync
+        run: |
+          repo init -u https://github.com/iromzy/microhil-yocto.git -b main
+          repo sync --no-clone-bundle --current-branch --jobs=4
+
+      - name: Set up Yocto environment
+        run: |
+          source poky/oe-init-build-env
+
+      - name: Build Yocto Image
+        run: |
+          bitbake microhil-image
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: yocto-images
+          path: |
+            build/tmp/deploy/images/raspberrypi5/
