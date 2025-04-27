@@ -31,4 +31,11 @@
              path="meta-raspberrypi"
              revision="scarthgap"
              remote="github" />
+
+    <!-- meta-virtualization-->
+    <project name="meta-virtualization"
+             path="meta-virtualization"
+             remote="yocto"
+             revision="scarthgap" />
+
 </manifest>
