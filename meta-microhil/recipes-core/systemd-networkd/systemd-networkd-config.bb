@@ -8,6 +8,7 @@ SRC_URI = " \
     file://eth0.network \
     file://eth0.100.netdev \
     file://eth0.100.network \
+    file://wlan0.network \
 "
 
 inherit allarch
@@ -18,6 +19,7 @@ do_install() {
     install -m 0644 ${WORKDIR}/eth0.100.network ${D}${sysconfdir}/systemd/network/
     install -d ${D}${sysconfdir}/systemd/network
     install -m 0644 ${WORKDIR}/eth0.100.netdev ${D}${sysconfdir}/systemd/network/
+    install -m 0644 ${WORKDIR}/wlan0.network ${D}${sysconfdir}/systemd/network/
 }
 
 FILES:${PN} += "${sysconfdir}/systemd/network/*.network ${sysconfdir}/systemd/network/*.netdev"

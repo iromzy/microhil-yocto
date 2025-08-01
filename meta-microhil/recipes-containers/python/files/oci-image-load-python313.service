@@ -1,0 +1,10 @@
+[Unit]
+Description=Load OCI image python-3.13.5-bullseye then start container (first boot only)
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/docker load -i /usr/share/containers/oci/python-3.13.5-bullseye.oci.tar.xz
+ExecStartPost=/usr/bin/docker tag python:3.13.5-bullseye python-bullseye:latest
+RemainAfterExit=yes
