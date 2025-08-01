@@ -1,8 +1,3 @@
-.repo
-build/cache
-build/tmp
-build/sstate-cache
-build/downloads
-build/bitbake-cookerdaemon.log
-build/conf/conf-*
-build/conf/templateconf.cfg
+version https://git-lfs.github.com/spec/v1
+oid sha256:d367687e119b9eaf36bb814be45c7f310ef5873dae066fe9c4d287de49e4d43e
+size 140

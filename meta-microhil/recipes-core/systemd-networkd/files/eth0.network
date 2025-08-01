@@ -1,6 +1,3 @@
-[Match]
-Name=eth0
-
-[Network]
-DHCP=both
-LinkLocalAddressing=ipv4
+version https://git-lfs.github.com/spec/v1
+oid sha256:43c5cedc88a48bbb13bf92d8246db98b79cadca8990bc2b1461d0c19e5edd9b4
+size 63
