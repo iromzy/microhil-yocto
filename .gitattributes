@@ -1,17 +1,1 @@
 *.tar.xz filter=lfs diff=lfs merge=lfs -text
-*.yaml filter=lfs diff=lfs merge=lfs -text
-*.gitignore filter=lfs diff=lfs merge=lfs -text
-/LICENSE filter=lfs diff=lfs merge=lfs -text
-*.md filter=lfs diff=lfs merge=lfs -text
-*.conf filter=lfs diff=lfs merge=lfs -text
-*.xml filter=lfs diff=lfs merge=lfs -text
-*.service filter=lfs diff=lfs merge=lfs -text
-*.xz filter=lfs diff=lfs merge=lfs -text
-*.bb filter=lfs diff=lfs merge=lfs -text
-*.bbappend filter=lfs diff=lfs merge=lfs -text
-/meta-microhil/recipes-core/openssh/files/sshd_config filter=lfs diff=lfs merge=lfs -text
-/meta-microhil/recipes-core/sudo/files/10-sudoers-microhil filter=lfs diff=lfs merge=lfs -text
-*.netdev filter=lfs diff=lfs merge=lfs -text
-*.network filter=lfs diff=lfs merge=lfs -text
-*.rules filter=lfs diff=lfs merge=lfs -text
-* !text !filter !merge !diff
