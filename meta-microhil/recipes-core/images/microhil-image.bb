@@ -49,3 +49,6 @@ EXTRA_USERS_PARAMS = "\
 
 # Install developpement (optional) tools with packagegroup
 IMAGE_INSTALL:append = " packagegroup-base packagegroup-microhil-dev"
+
+# For GCC G++ and all C code essential
+IMAGE_INSTALL:append = " packagegroup-core-buildessential "
