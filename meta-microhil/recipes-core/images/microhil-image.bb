@@ -25,7 +25,7 @@ SYSTEMD_AUTO_ENABLE:avahi-daemon = "enable"
 
 
 # Python 3 libraries
-IMAGE_INSTALL:append = " python3 python3-pip "
+IMAGE_INSTALL:append = " python3 python3-pip python3-modules"
 
 
 RPI_EXTRA_CONFIG = "dtparam=spi=on dtparam=pwm=on"
