@@ -25,7 +25,7 @@ SYSTEMD_AUTO_ENABLE:avahi-daemon = "enable"
 
 
 # Python 3 libraries
-IMAGE_INSTALL:append = " python3 python3-pip python3-modules"
+IMAGE_INSTALL:append = " python3 python3-pip python3-modules python3-dev"
 
 
 RPI_EXTRA_CONFIG = "dtparam=spi=on dtparam=pwm=on"
@@ -37,7 +37,7 @@ IMAGE_INSTALL:append = " \
 "
 SYSTEMD_AUTO_ENABLE:pn-docker = "enable"
 
-# Install dokcer image
+# Install docker image
 IMAGE_INSTALL:append  = " python-container"
 
 PASSWD = '\$6\$hXB22UUk/m0pCe0d\$RruohQIC1.Xtm.JwVfISS6JJOgU0fvbZbhVt0INh6mGg4JLM8QzPVcZn3F92IS8dAtBYufK5gz/m/1Uv7beem.'
