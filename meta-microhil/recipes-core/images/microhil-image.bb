@@ -27,9 +27,6 @@ SYSTEMD_AUTO_ENABLE:avahi-daemon = "enable"
 # Python 3 libraries
 IMAGE_INSTALL:append = " python3 python3-pip python3-modules python3-dev"
 
-
-RPI_EXTRA_CONFIG = "dtparam=spi=on dtparam=pwm=on"
-
 # Add Docker and Docker-Compose in the image
 IMAGE_INSTALL:append = " \
     docker \
